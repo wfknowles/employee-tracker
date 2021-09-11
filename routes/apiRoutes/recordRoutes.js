@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../../db/connection');
-const inputCheck = require('../../utils/inputCheck');
 // const Record = require('../../lib/Record.js');
 
 
@@ -25,7 +24,7 @@ router.get('/:record', (req, res) => {
 // Create
 router.post('/:record', (req, res) => {
     // const errors = Record.errorCheck(req.params.record, req.body);
-    const errors = inputCheck(body, 'whitelist');
+    const errors = false;
     if (errors) {
         res.status(400).json({ error: errors });
         return;
@@ -71,7 +70,7 @@ router.get('/:record/:id', (req, res) => {
 // Update
 router.put('/:record/:id', (req, res) => {
     // const errors = Record.errorCheck(req.params.record, req.body);
-    const errors = inputCheck(req.body, 'whitelist');
+    const errors = false;
     if (errors) {
         res.status(400).json({ error: errors });
         return;
