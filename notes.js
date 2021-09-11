@@ -1,17 +1,31 @@
 /*
 
-POA:
+For a node project with a an express server and mysql db, here is a good base project map:
 
-1. Create Github Repo and Clone to Local
-2. Node: npm init
-3. Modules: npm install inquirer mysql2 console.table jest
-4. Pseudo-Code *
-    - data layer: schema and seed files
-    - base classes, tests, and query methods
-    - inquirer scripts
+* Setup git repo and clone to local machine
+    - include .gitignore and README.md
+* Pseudo-code neccessary objects and routes
+* Setup server and required npm modules
+    - run: npm init --y
+    - run: npm install express mysql2
+    - run: npm install jest --save-dev
+    - update package.json file to use/start server.js and jest for testing
+    - create server.js file
+        - require express, db, and any routes
+        - setup neccessary middleware
+        - setup db connection
+* Setup mysql database
+    - create db folder and create connection.js, db.sql, schema.sql, seeds.sql
+    - run: mysql -u root -p
+    - source db, schema, and seed files in mysql
+* Setup routes
+    - create routes folder and add neccessary folders/files
+    - test all api endpoints
+
 
 Classes:
 EmployeeTracker - app wrapper - start, action-menu, action-handler
+Record - record handler - whitelisting, index, create, update, delete
 Employee
 Department
 Role
@@ -33,6 +47,9 @@ menu: view all departments, view all roles, view all employees, add a department
 -delete department, role, and employee *bonus*
 -view department by cumulative salary *bonus*
 
+asynchronous queries: https://www.npmjs.com/package/mysql2
+
+REQS:
 
 AS A business owner
 I WANT to be able to view and manage the departments, roles, and employees in my company
@@ -55,8 +72,6 @@ WHEN I choose to add an employee
 THEN I am prompted to enter the employee’s first name, last name, role, and manager and that employee is added to the database
 WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
-
-asynchronous queries: https://www.npmjs.com/package/mysql2
 
 BONUS: 
 - Update employee managers.
