@@ -8,16 +8,13 @@
     const app = express();
 
     // middleware
-    app.use(express.urlencoded({ extended: false }));
+    // app.use(express.urlencoded({ extended: false }));
     app.use(express.json());
 
-    // routes
-    app.use('/api', apiRoutes);
-
     // default 404
-    app.use((req, res) => {
-        res.status(404).end();
-    });
+    // app.use((req, res) => {
+    //     res.status(404).end();
+    // });
 
     //database
     const dbConnection = new Promise((resolve, reject) => {
