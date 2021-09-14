@@ -18,9 +18,8 @@ For a node project with a an express server and mysql db, here is a good base pr
     - create db folder and create connection.js, db.sql, schema.sql, seeds.sql
     - run: mysql -u root -p
     - source db, schema, and seed files in mysql
-* Setup routes
-    - create routes folder and add neccessary folders/files
-    - test all api endpoints
+* Setup Record class for handling interactions with mysql
+* Setup
 
 
 Classes:

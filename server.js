@@ -1,6 +1,6 @@
     const express = require('express');
     const db = require('./db/connection');
-    const apiRoutes = require('./routes/apiRoutes');
+    
     const EmployeeTracker = require('./lib/EmployeeTracker');
 
     // server
@@ -8,13 +8,7 @@
     const app = express();
 
     // middleware
-    // app.use(express.urlencoded({ extended: false }));
     app.use(express.json());
-
-    // default 404
-    // app.use((req, res) => {
-    //     res.status(404).end();
-    // });
 
     //database
     const dbConnection = new Promise((resolve, reject) => {
