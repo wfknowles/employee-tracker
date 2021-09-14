@@ -3,9 +3,7 @@
 <img width="598" alt="Screen Shot 2021-09-13 at 8 29 58 PM" src="https://user-images.githubusercontent.com/23103606/133179946-9840336e-71ae-4551-a523-db63740d6c15.png">
 
 ## Description
-An application that generates a team website from user defined input on the command line:
-
-File generates to the './dist' folder within app directory.
+An command line interface for managing department, role, and employee records within database
 
 ## Installation
 Clone the project to your local machine and install dependencies.
