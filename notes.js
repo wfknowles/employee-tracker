@@ -1,6 +1,6 @@
 /*
 
-For a node project with a an express server and mysql db, here is a good base project map:
+## For a node project with a an express server and mysql db, here is a good base project map:
 
 * Setup git repo and clone to local machine
     - include .gitignore and README.md
@@ -18,19 +18,29 @@ For a node project with a an express server and mysql db, here is a good base pr
     - create db folder and create connection.js, db.sql, schema.sql, seeds.sql
     - run: mysql -u root -p
     - source db, schema, and seed files in mysql
+
+## For this specific project, here was/is a good project map:
+
 * Setup Record class for handling interactions with mysql
-* Setup
+    - props: id
+    - CRUD methods: index, create, read, update, destroy
+    - base methods: label, table, params, sql, query, find
+    - app methods: getId, getTable, getSql, getParams, getReplaced, getValues
+* Setup App classes that extend Record
+    - Employee: first_name, last_name, role_id, manager_id
+    - Department: name
+    - Role: title, salary, department_id
+    - For each class overwrite base methods: label, table, params, sql
+* Setup App initializer
+    - EmployeeTracker
+        - methods: start, actionMenu, actionHandler
+* Setup Inquirer class for handling all command line prompts
+    - Prompt
+        - main methods: menu, add, select
+        - class specific methods: addEmployee, addRole, addDepartment
 
+## Inquirer Interactions
 
-Classes:
-EmployeeTracker - app wrapper - start, action-menu, action-handler
-Record - record handler - whitelisting, index, create, update, delete
-Employee
-Department
-Role
-
-
-start
 menu: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
 
 -all departments: formatted table, department.name and department.id
@@ -45,14 +55,16 @@ menu: view all departments, view all roles, view all employees, add a department
 -view employees by department *bonus*
 -delete department, role, and employee *bonus*
 -view department by cumulative salary *bonus*
+-exit
 
-asynchronous queries: https://www.npmjs.com/package/mysql2
-
-REQS:
+## User Story
 
 AS A business owner
 I WANT to be able to view and manage the departments, roles, and employees in my company
 SO THAT I can organize and plan my business
+
+## REQS
+* = Complete
 
 GIVEN a command-line application that accepts user input
 * WHEN I start the application
