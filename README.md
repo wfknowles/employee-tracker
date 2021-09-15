@@ -24,7 +24,7 @@ To start application, start node server from within app directory.
 ```node server.js```
 
 ## Usage
-[A walkthrough video is available here](https://drive.google.com/file/d/1bo6anhUQrtdVEAPfGVcF6IWLLMzOtTsn/view)
+[A walkthrough video is available here](https://drive.google.com/file/d/1gxTTCLOFdQh_XE7fZDfWEbYboyHh_M7Q/view)
 
 ## Contribution
 Made with ❤️ by Will Knowles
